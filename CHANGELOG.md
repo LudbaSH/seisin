@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Sable are documented here. This project follows
+All notable changes to Seisin are documented here. This project follows
 [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
