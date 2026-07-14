@@ -2,10 +2,11 @@
 
 > Every application in one place. Watch the patterns surface.
 
-Seisin is a desktop application that helps you track job applications, compare
-offers, prepare for interviews, and analyse your search progress from one place.
-No account required, and your data never leaves your device. Seisin only reaches
-the internet to check for a newer version.
+Seisin keeps your whole job search in one place, every application, interview and
+offer, and turns it into analytics automatically. Instead of a spreadsheet that
+records the search without ever explaining it, Seisin reads the patterns back to
+you: your pace, your pipeline, and which sources are actually getting you replies.
+No account, no sign-in, and it is free.
 
 **This repository hosts the public downloads, changelog, and issue tracker.**
 The application is proprietary; the source code is not published here.
@@ -36,9 +37,9 @@ A packaged macOS build is not published yet. It is planned for a future release.
   status, location, salary range, work type, relocation, source, and notes
 - **Status Pipeline**: track every stage from Planned -> Applied -> Assessment ->
   Interview -> Offer -> Rejected, with planned roles excluded from conversion stats
-- **Analytics**: applications over time, weekly pace, pipeline health, source
-  conversion, response rate, and a conversion funnel, each with a plain-English
-  explanation tooltip
+- **Analytics**: applications over time, weekly pace, pipeline health, a conversion
+  funnel, response time, and response rate by source split by whether the reply
+  progressed or was a rejection, each with a plain-English explanation tooltip
 - **World Map**: choropleth map of where you are applying, with click-to-zoom
 - **Offer Comparison**: side-by-side offer cards with relocation-adjusted salary
   and work type
@@ -50,23 +51,37 @@ A packaged macOS build is not published yet. It is planned for a future release.
   color applied across the top bar, buttons, and charts
 - **Privacy Mode**: blur salary figures and names for screen sharing
 - **Update Notifications**: Seisin checks GitHub on launch and tells you when a newer
-  version is available
+  version is available; this launch check can be turned off in Settings
 
 ---
 
-## Privacy
+## Free and paid
 
-Seisin is local-first. All of your data lives in a SQLite database on your own
-machine, with no account, no sign-in, and no cloud sync. The only request Seisin
-ever makes is a version check against the GitHub releases API, which sends no
-personal data.
+Seisin is free and stays free. A paid tier will come later so the project can sustain
+itself, but the rule is that every feature has a usable free version and paying buys
+depth rather than access. The tracker, your full history, and the analytics you see
+today do not move behind a paywall.
+
+## Data and the network
+
+Your data is a SQLite database on your own machine, with no account and no sign-in, and
+there is no telemetry. An optional account with cloud sync is planned for a future
+version; it will stay optional, local-only will remain supported, and nothing is
+uploaded unless you choose it.
+
+Seisin makes three network requests, none of which carry anything about you. A version
+check against the GitHub releases API runs on launch and can be turned off in Settings.
+The other two fire only when you click them: pasting a job URL fetches that public page
+to read the role and company, and the Offers screen can pull the European Central Bank's
+daily exchange rates. See the [Privacy page](https://getseisin.com/privacy.html) for
+details.
 
 ---
 
 ## Support
 
 Found a bug or have a feature request? [Open an issue](https://github.com/LudbaSH/seisin/issues)
-or email [seisinsupport@gmail.com](mailto:seisinsupport@gmail.com).
+or email [support@getseisin.com](mailto:support@getseisin.com).
 
 ---
 
